@@ -6,9 +6,13 @@ This is a simple Hono + Clouflare worker proxy that helps distribute and share t
 
 Follow these steps to setup the FreshRSS proxy for your own instance:
 
-1. Make sure [Bun](https://bun.sh) is installed
+### 1. Make sure [Bun](https://bun.sh) is installed
 
-2. Clone and install dependencies
+```bash
+bun --version
+```
+
+### 2. Clone and install dependencies
 
 ```bash
 git clone https://github.com/stevedylandev/freshrss-api-proxy
@@ -16,7 +20,7 @@ cd freshrss-api-proxy
 bun install
 ```
 
-3. Setup `.dev.vars`
+### 3. Setup `.dev.vars`
 
 Create a new file in the root of the project called `.dev.vars` with the following values
 
@@ -26,7 +30,7 @@ FRESHRSS_USERNAME=
 FRESHRSS_PASSWORD=
 ```
 
-4. Start up the dev server and test
+### 4. Start up the dev server and test
 
 ```bash
 bun dev
@@ -39,7 +43,7 @@ You can use either of the following formats with the query `?format=`
 - `json` (default)
 - `opml`
 
-5. Deployment
+### 5. Deployment
 
 Login with `wrangler` to your Cloudflare account
 
