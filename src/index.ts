@@ -65,6 +65,10 @@ app.get("/", async (c) => {
 
 	const data = (await response.json()) as SubscriptionList;
 
+	if (data.subscriptions) {
+		data.subscriptions = data.subscriptions.map(({ iconUrl, ...feed }) => feed);
+	}
+
 	// Return JSON format
 	if (format === "json") {
 		return c.json(data);
